@@ -23,40 +23,15 @@
             capture base object and all overlays within JSON format.
             <ul>
               <li>
-                <b>OCA file [required] (XLS/XLSX)</b><br />
+                <b>OCA Excel Template [required] (XLS/XLSX)</b><br />
                 <a
                   href="https://github.com/THCLab/oca-parser-xls/raw/main/templates/template.xlsx">
                   Download template</a
                 >.
               </li>
               <li>
-                <b>OCA references files (XLS/XLSX)</b><br />
-                When any of attributes in OCA file is a
-                <a
-                  target="_blank"
-                  href="https://oca.colossi.network/specification/#attribute-type">
-                  Reference or Array[Reference] type</a
-                >, you can compose it's OCA files into OCA Bundle.
-              </li>
-              <li>
-                <b>OCA credential layout file (YML/YAML)</b><br />
-                <a
-                  target="_blank"
-                  href="https://github.com/THCLab/oca-html-preview-demo/tree/main/examples/layout/credential.yaml">
-                  See example</a
-                >.
-              </li>
-              <li>
-                <b>OCA form layout file (YML/YAML)</b><br />
-                <a
-                  target="_blank"
-                  href="https://github.com/THCLab/oca-html-preview-demo/tree/main/examples/layout/form.yaml">
-                  See example</a
-                >.
-              </li>
-              <li>
                 <b>Data Entry file</b><br />
-                Generated XLSX file for capturing data
+                Generated XLSX file for entering data
               </li>
             </ul>
           </q-card-section>
@@ -77,48 +52,17 @@
           accept=".xls,.xlsx"
           multiple />
 
-        <div class="row items-center">
-          <div class="col-5">
-            <q-checkbox
-              v-model="withDefaultCredentialLayout"
-              size="lg"
-              label="Generate default Credential Layout" />
-          </div>
-          <div class="col-2">
-            <div class="row justify-center">or</div>
-          </div>
-          <div class="col-5">
-            <q-file
-              v-model="credentialLayoutFile"
-              label="Select Credential Layout file"
-              accept=".yml,.yaml"
-              dense />
-          </div>
-        </div>
-
-        <div class="row items-center">
-          <div class="col-5">
-            <q-checkbox
-              v-model="withDefaultFormLayout"
-              size="lg"
-              label="Generate default Form Layout" />
-          </div>
-          <div class="col-2">
-            <div class="row justify-center">or</div>
-          </div>
-          <div class="col-5">
-            <q-file
-              v-model="formLayoutFile"
-              label="Select Form Layout file"
-              accept=".yml,.yaml"
-              dense />
-          </div>
-        </div>
-
         <q-checkbox
           v-model="withDataEntry"
           size="lg"
           label="Generate Data Entry File" />
+
+        <br />
+
+        <q-checkbox
+          v-model="withArchive"
+          size="lg"
+          label="Generate Archive Text Format" />
 
         <br />
 
@@ -155,6 +99,7 @@ export default defineComponent({
     const withDefaultFormLayout = ref(false)
     const formLayoutFile = ref()
     const withDataEntry = ref(false)
+    const withArchive = ref(false)
     const convertionResult = ref('')
 
     const ocaConverterUrl = 'https://tool.oca.argo.colossi.network'
@@ -198,6 +143,7 @@ export default defineComponent({
       formData.append('withDefaultCredentialLayout', ""+withDefaultCredentialLayout.value)
       formData.append('withDefaultFormLayout', ""+withDefaultFormLayout.value)
       formData.append('withDataEntry', ""+withDataEntry.value)
+      formData.append('withArchive', ""+withArchive.value)
 
       const response = await $axios.post(ocaConverterUrl, formData)
       const responseResult = response.data
@@ -227,6 +173,7 @@ export default defineComponent({
       withDefaultFormLayout.value = false
       formLayoutFile.value = null
       withDataEntry.value = false
+      withArchive.value = false
     }
 
     return {
@@ -239,7 +186,8 @@ export default defineComponent({
       credentialLayoutFile,
       withDefaultFormLayout,
       formLayoutFile,
-      withDataEntry
+      withDataEntry,
+      withArchive
     }
   }
 })

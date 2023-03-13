@@ -2,8 +2,11 @@
   "name": "oca-browser",
   "version": "0.1.25",
   "description": "Tool allowing to play with unify data language (OCA)",
-  "productName": "OCA Browser",
+  "productName": "Semantic Engine",
   "author": "Marcin Olichwiruk <marcin@opensoftware.pl>",
+  "contributors": [
+    "Xingjian Xu (Agri-food Data Canada)"
+  ],
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue ./",
@@ -16,6 +19,7 @@
     "@quasar/extras": "^1.0.0",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
+    "github-markdown-css": "^5.2.0",
     "oca.js": "^0.2.29",
     "oca.js-form-core": "^0.2.4",
     "oca.js-form-html": "^0.2.3",

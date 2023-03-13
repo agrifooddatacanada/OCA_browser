@@ -10,15 +10,22 @@
           aria-label="Menu"
           @click="toggleLeftDrawer" />
 
-        <q-space />
+        <div class="col"></div>
 
         <q-btn v-if="$q.screen.gt.xs" flat no-caps no-wrap class="q-ml-xs">
           <q-toolbar-title shrink class="text-weight-bold">
-            OCA Browser
+            Semantic Engine
           </q-toolbar-title>
         </q-btn>
 
-        <q-space />
+        <div class="col"></div>
+
+        <a href="https://agrifooddatacanada.ca/"
+          ><img
+            src="/adc-logo-white.png"
+            alt="ADC Logo"
+            style="max-width: 100px" />
+        </a>
       </q-toolbar>
     </q-header>
 
@@ -26,7 +33,7 @@
       v-model="leftDrawerOpen"
       show-if-above
       bordered
-      class="bg-blue-2"
+      class="bg-primary"
       :width="240">
       <q-scroll-area class="fit">
         <q-list padding>
@@ -61,14 +68,14 @@
 const modules = [
   [
     {
-      title: 'Develop',
-      icon: 'architecture',
+      title: 'Training',
+      icon: 'school',
       path: '/'
     },
     {
-      title: 'Preview',
-      icon: 'preview',
-      path: '/preview'
+      title: 'Develop',
+      icon: 'architecture',
+      path: '/develop'
     },
     {
       title: 'Validate',
