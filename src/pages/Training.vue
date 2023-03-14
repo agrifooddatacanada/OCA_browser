@@ -40,7 +40,7 @@
             <q-btn
               type="a"
               color="primary"
-              label="View in Github"
+              label="Access the Tutorials"
               href="https://agrifooddatacanada.github.io/OCA_training_pathway" />
           </div>
         </q-card>
