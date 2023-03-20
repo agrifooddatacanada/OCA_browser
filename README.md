@@ -1,2 +1,35 @@
 # OCA_browser
-An ADC-modified version of THCLab/oca-browser.
+
+An [Agri-food Data Canada (ADC)](https://agrifooddatacanada.ca/) modified version of [THCLab/oca-browser](https://github.com/THCLab/oca-browser).
+
+OCA Browser is a tool allowing to play with unify data language (OCA).
+
+## License
+
+EUPL 1.2 
+
+We have distilled the most crucial license specifics to make your adoption seamless: [see here for details](https://github.com/THCLab/licensing).
+
+## Install the dependencies
+```bash
+yarn
+```
+
+### Start the app in development mode (hot-code reloading, error reporting, etc.)
+```bash
+quasar dev
+```
+
+### Lint the files
+```bash
+yarn run lint
+```
+
+### Build the app for production
+```bash
+quasar build
+```
+
+### Customize the configuration
+See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
+
