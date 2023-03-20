@@ -58,7 +58,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-@import 'node_modules/github-markdown-css/github-markdown-light.css';
+@import '/node_modules/github-markdown-css/github-markdown-light.css';
 .training-card {
   min-width: 300px;
   width: min(700px, 100%);
