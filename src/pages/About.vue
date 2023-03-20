@@ -73,6 +73,10 @@
           as the underlying schema standard. Overlays capture architecture is an
           extensible, flexible, international, open, and machine-accessible
           standard for schemas.
+          <q-img
+            src="../assets/oca_overlays.png"
+            alt="OCA schema structure example with overlays"
+            fit="contain" />
         </p>
       </q-card-section>
     </q-card>
