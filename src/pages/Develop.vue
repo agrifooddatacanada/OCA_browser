@@ -25,7 +25,7 @@
               <li>
                 <b>OCA Excel Template [required] (XLS/XLSX)</b><br />
                 <a
-                  href="https://github.com/THCLab/oca-parser-xls/raw/main/templates/template.xlsx">
+                  href="https://github.com/carlyh-micb/OCA_training_pathway/raw/main/templates/UoG_SchemaTemplate_Latest.xlsx">
                   Download template</a
                 >.
               </li>
