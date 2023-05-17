@@ -1,0 +1,29 @@
+name: Build and Deploy to Azure (Prod)
+on:
+  push:
+    branches:
+      - main
+
+env:
+  IMAGE_TAG: latest
+  AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: Production
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Build Docker image
+        run: docker build -t oca-browser:$IMAGE_TAG .
+      
+      - name: Copy assets from builder
+        run: docker create --name oca-browser-container oca-browser:$IMAGE_TAG && docker cp oca-browser-container:/app/dist ./ && docker rm oca-browser-container
+
+      - name: Upload to blob storage
+        uses: azure/CLI@v1
+        with:
+          inlineScript: |
+            az storage blob upload-batch --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}" --account-name ${{ vars.AZURE_STORAGE_ACCOUNT_NAME }} --destination '$web' --source ./dist --pattern "*"
