@@ -57,12 +57,12 @@
           size="lg"
           label="Generate Data Entry File" />
 
-        <br />
+        <!-- <br /> 
 
         <q-checkbox
           v-model="withArchive"
           size="lg"
-          label="Generate Archive Text Format" />
+          label="Generate Archive Text Format" /> -->
 
         <br />
 
