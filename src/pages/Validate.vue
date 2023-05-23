@@ -19,7 +19,7 @@
           <q-separator />
           <q-card-section class="text-subitle2">
             This validation tool validates the schema structure and verifies the
-            objectual integrity of the OCA Bundle.
+            SAID identifiers of the OCA Bundle.
           </q-card-section>
         </div>
       </q-slide-transition>
