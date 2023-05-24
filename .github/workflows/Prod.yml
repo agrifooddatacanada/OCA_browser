@@ -1,4 +1,4 @@
-name: Build and Deploy to Azure (dev)
+name: Build and Deploy to Azure (prod)
 on:
   push:
     branches:
