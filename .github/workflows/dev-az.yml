@@ -2,7 +2,7 @@ name: Build and Deploy to Azure (dev)
 on:
   push:
     branches:
-      - main
+      - website_dev_semantic_engine 
 
 env:
   IMAGE_TAG: latest

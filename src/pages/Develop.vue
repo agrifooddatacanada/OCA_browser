@@ -18,20 +18,20 @@
         <div v-show="converterHelpExpanded">
           <q-separator />
           <q-card-section class="text-subitle2">
-            It converts properly prepared xls(x) file to OCA Bundle.<br />
+            Use this parser to convert froma properly prepared Excel Schema Template file to an OCA Bundle.<br />
             As an outcome you would receive a zip file which would include
-            capture base object and all overlays within JSON format.
+            capture base object and all overlays within JSON format.<br />
+            The zip file is the machine-actionable version of your schema which you can store together with your data or upload into a repository for reference.<br />
             <ul>
               <li>
                 <b>OCA Excel Template [required] (XLS/XLSX)</b><br />
                 <a
                   href="https://github.com/agrifooddatacanada/OCA_training_pathway/raw/main/templates/UoG_SchemaTemplate_Latest.xlsx">
-                  Download template</a
-                >.
+                  Download template</a>.
               </li>
               <li>
-                <b>Data Entry file</b><br />
-                Generated XLSX file for entering data
+                 <b>Data Entry File</b><br />
+                 An Excel file created when you parse your schema that creates a formated Excel sheet suitable for data entry based on the schema template used.
               </li>
             </ul>
           </q-card-section>
@@ -46,11 +46,11 @@
           label="Select OCA file"
           accept=".xls,.xlsx"
           filled />
-        <q-file
+        <!-- <q-file
           v-model="referenceFiles"
           label="Select OCA references files"
           accept=".xls,.xlsx"
-          multiple />
+          multiple /> -->
 
         <q-checkbox
           v-model="withDataEntry"
