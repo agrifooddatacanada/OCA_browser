@@ -18,10 +18,9 @@
         <div v-show="converterHelpExpanded">
           <q-separator />
           <q-card-section class="text-subitle2">
-            Use this parser to convert froma properly prepared Excel Schema Template file to an OCA Bundle.<br />
-            As an outcome you would receive a zip file which would include
-            capture base object and all overlays within JSON format.<br />
-            The zip file is the machine-actionable version of your schema which you can store together with your data or upload into a repository for reference.<br />
+            Use this parser to convert from a properly prepared Excel Schema Template file to an OCA Schema Bundle.<br />
+            As an outcome you would receive a zip file with your schema.<br />
+            The zip file is the machine-readable version of your schema which you can store together with your data or upload into a repository for reference.<br />
             <ul>
               <li>
                 <b>OCA Excel Template [required] (XLS/XLSX)</b><br />
@@ -31,7 +30,7 @@
               </li>
               <li>
                  <b>Data Entry File</b><br />
-                 An Excel file created when you parse your schema that creates a formated Excel sheet suitable for data entry based on the schema template used.
+                 An Excel file, ready for data entry, and with labels and descriptions taken from your schema.
               </li>
             </ul>
           </q-card-section>
@@ -43,7 +42,7 @@
       <q-card-section>
         <q-file
           v-model="rootFile"
-          label="Select OCA file"
+          label="Select Excel Template file"
           accept=".xls,.xlsx"
           filled />
         <!-- <q-file
