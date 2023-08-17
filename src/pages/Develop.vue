@@ -1,12 +1,12 @@
 <template>
   <q-page class="q-pa-md">
-    <q-card-section>
+<--    <q-card-section>
       <div class="text-h5">OCA Composer</div>
         <q-card-section class="text-subitle2">
           Visit <a href="https://ocacomposer.semanticengine.org>OCA Composer</a> to create an Excel Template for your schema using a web interface.</br>
           Here you can also edit .zip schema bundles, and generate a plain text Readme file of your schema.
         </q-card-section>
-    </q-card-section>
+    </q-card-section> --!>
 
     <q-separator />
     <q-card class="converter-card">
