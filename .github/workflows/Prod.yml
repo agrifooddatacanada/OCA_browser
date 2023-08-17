@@ -26,4 +26,4 @@ jobs:
         uses: azure/CLI@v1
         with:
           inlineScript: |
-            az storage blob upload-batch --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}" --account-name ${{ vars.AZURE_STORAGE_ACCOUNT_NAME }} --destination '$web' --source ./dist --pattern "*"
+            az storage blob upload-batch --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}" --account-name ${{ vars.AZURE_STORAGE_ACCOUNT_NAME }} --destination '$web' --source ./dist --pattern "*" --overwrite
