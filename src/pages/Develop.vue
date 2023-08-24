@@ -8,9 +8,9 @@
 
             Here you can also edit .zip schema bundles, and generate a plain text Readme file of your schema.<br />
 
-          </q-card-section>
+    </q-card-section>
 
-          <q-separator />
+    <q-separator />
 
  
       <q-card-section>
@@ -76,6 +76,18 @@
           label="Generate Archive Text Format" /> -->
 
         <br />
+        <q-separator />
+        <q-card-section class="text-subitle2">
+         <div class="text-h5"> Saving, Depositing and/or Publishing your Schema </div>
+
+            After you have created your schema, <a href="https://agrifooddatacanada.github.io/OCA_training_pathway/deposit_schema.html" >follow these instructions to save your schema with your data or in a repository. </a> <br />
+
+            When you save your schema you should save both the .zip Schema Bundle and the .txt Schema Readme together.<br />
+
+        </q-card-section>
+
+
+
 
         <q-btn color="primary" :disable="!rootFile" @click="convert">
           Convert
