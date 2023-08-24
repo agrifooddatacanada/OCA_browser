@@ -12,7 +12,6 @@
 
     <q-separator />
 
- 
       <q-card-section>
         <div class="row">
           <div class="text-h5">Excel Template to OCA Schema Bundle Converter</div>
@@ -85,9 +84,6 @@
             When you save your schema you should save both the .zip Schema Bundle and the .txt Schema Readme together.<br />
 
         </q-card-section>
-
-
-
 
         <q-btn color="primary" :disable="!rootFile" @click="convert">
           Convert
