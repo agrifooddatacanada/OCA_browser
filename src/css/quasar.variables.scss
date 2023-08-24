@@ -35,6 +35,11 @@ $button-font-weight: 400 ;
 
 $light-grey: #F7F7F7;
 
+/* Hide scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
 .q-header {
   background-image: linear-gradient(to left, $primary, $secondary);
 }
